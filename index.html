@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Portal</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar"><div class="brand">Student<span>Portal</span></div><a href="#students">View Students ↓</a></header>
+  <main class="container">
+    <section class="intro"><p class="eyebrow">STUDENT MANAGEMENT SYSTEM</p><h1>Student Registration</h1><p>Enter student details and manage registrations in one place.</p></section>
+    <section class="card">
+      <h2>Registration Form</h2>
+      <form id="registrationForm">
+        <div class="form-grid">
+          <div class="field"><label for="full_name">Full Name</label><input id="full_name" type="text" placeholder="Enter full name" required></div>
+          <div class="field"><label for="email">Email Address</label><input id="email" type="email" placeholder="name@example.com" required></div>
+          <div class="field"><label for="phone">Mobile Number</label><input id="phone" type="tel" placeholder="10-digit mobile number" maxlength="10" required></div>
+          <div class="field"><label for="course">Course</label><select id="course" required><option value="">Select course</option><option>Computer Engineering</option><option>Information Technology</option><option>AI & Data Science</option><option>Electronics</option><option>Mechanical</option></select></div>
+        </div>
+        <p id="message" role="alert"></p><button class="btn" type="submit">Register Student</button>
+      </form>
+    </section>
+    <section class="students" id="students">
+      <div class="section-heading"><div><p class="eyebrow">ADMIN DASHBOARD</p><h2>Registered Students</h2></div><div class="count" id="studentCount">0 Students</div></div>
+      <input class="search" id="searchInput" type="search" placeholder="Search by name, email or course...">
+      <div class="table-wrap"><table><thead><tr><th>#</th><th>Full Name</th><th>Email</th><th>Mobile</th><th>Course</th><th>Action</th></tr></thead><tbody id="studentTable"></tbody></table><p id="emptyState" class="empty-state">No students registered yet.</p></div>
+      <button id="clearAll" class="clear-btn" type="button">Clear All Records</button>
+    </section>
+    <footer>Student Registration Portal · HTML, CSS & JavaScript</footer>
+  </main>
+  <script src="script.js"></script>
+</body></html>
